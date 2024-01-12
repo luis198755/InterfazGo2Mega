@@ -12,11 +12,11 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	// Pedir el número de canales
-	fmt.Print("Ingrese el número de canales (máximo 6): ")
+	fmt.Print("Ingrese el número de canales (máximo 10): ")
 	canalesStr, _ := reader.ReadString('\n')
 	canalesStr = strings.TrimSpace(canalesStr)
 	canales, err := strconv.Atoi(canalesStr)
-	if err != nil || canales < 1 || canales > 6 {
+	if err != nil || canales < 1 || canales > 10 {
 		fmt.Println("Número de canales inválido. Debe ser un número entre 1 y 6.")
 		return
 	}
